@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -47,10 +48,22 @@
   </style>
 </head>
 <body>
-  <form class="form-container" action="https://formspree.io/f/mkgbneeg" method="POST">
+  <form class="form-container" action="" method="POST">
     <input name="name" type="text" placeholder="Name*" required />
     <input name="telefon" type="tel" placeholder="Telefon*" required />
     <input name="email" type="email" placeholder="E-mail*" required />
     <select name="anfrage" required>
       <option selected disabled>unverbindliche Anfrage</option>
-      <option>Allgemeine An
+      <option>Allgemeine Anfrage</option>
+      <option>Terminvereinbarung</option>
+      <option>Rückrufbitte</option>
+      <option>Sonstiges</option>
+    </select>
+    <div class="checkbox">
+      <input type="checkbox" name="datenschutz" value="akzeptiert" required />
+      <label>&nbsp;Ich akzeptiere die Datenschutzerklärung</label>
+    </div>
+    <button type="submit" class="submit-button">Absenden →</button>
+  </form>
+</body>
+</html>
