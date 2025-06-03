@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Call Button</title>
+  <style>
+    .call-now-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 9999;
+    }
+
+    .call-button {
+      background-color: #FFD700; /* أصفر */
+      color: white;
+      border-radius: 50%;
+      padding: 20px;
+      font-size: 30px;
+      text-align: center;
+      box-shadow: 0 0 0 rgba(0, 0, 255, 0.4);
+      animation: pulse 2s infinite;
+      text-decoration: none;
+    }
+
+    .pulse-ring {
+      position: absolute;
+      width: 70px;
+      height: 70px;
+      border: 3px solid #00BFFF; /* أزرق */
+      border-radius: 50%;
+      animation: ring 2s infinite;
+      top: -10px;
+      left: -10px;
+      z-index: -1;
+    }
+
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(0, 0, 255, 0.4);
+      }
+      70% {
+        box-shadow: 0 0 0 20px rgba(0, 0, 255, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(0, 0, 255, 0);
+      }
+    }
+
+    @keyframes ring {
+      0% {
+        transform: scale(0.5);
+        opacity: 1;
+      }
+      100% {
+        transform: scale(2);
+        opacity: 0;
+      }
+    }
+  </style>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <div class="call-now-button">
+    <div class="pulse-ring"></div>
+    <div class="pulse-ring"></div>
+    <a href="tel:+491234567890" class="call-button">
+      <i class="fas fa-phone-alt"></i>
+    </a>
+  </div>
+
+</body>
+</html>
